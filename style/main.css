@@ -14,6 +14,11 @@ Parrafes -> Vegur
 	padding-right: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 @font-face {
 	font-family: 'Vegur-Light';
     src: url('../fonts/original_Vegur-Light.eot?#iefix') format('embedded-opentype'), 
@@ -27,6 +32,7 @@ Parrafes -> Vegur
 p {
 	font-family: 'Vegur-Light';
 	line-height: 1;
+  font-size: 16px;
 }
 
 
@@ -119,7 +125,9 @@ header .scroll-down .btn:hover {
 
 /* WORKS */
 .work-container {
-	padding: 20px 0;
+	margin: 20px 0;
+  background-color: #efefef;
+  color: black;
 }
 .work-description {
 	padding: 10px;
