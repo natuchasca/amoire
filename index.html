@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="fonts/font-awesome.css">
   <link rel="stylesheet" href="style/animate.css">
   <link rel="stylesheet" href="style/main.css">
+
+  <!-- Include a Sidr bundled CSS theme -->
+  <link rel="stylesheet" href="js/sidr/stylesheets/jquery.sidr.dark.css">
+
 </head>
-<body>
+<body class="body">
   <!--
   =================================
   ScrollToTop button
@@ -24,23 +28,22 @@
   NAV
   =================================
   -->
-  <nav id="mainNav" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top navbar-transparent">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+        <button type="button" class="navbar-toggle" id="mobile-menu-toggle" class="visible-xs visible-sm" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar top-bar"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
         </button>
-        <div class="navbar-brand navbar-brand-centered">
+        <div class="navbar-brand navbar-brand-centered hidden-xs">
           <a class="scroller" href="#top">
-              <img id="navlogo" src="http://placehold.it/200x30" alt="" height="30" width="auto">
+              <img id="navlogo" src="http://placehold.it/200x30" alt="logo" height="30" width="auto">
           </a>
         </div>
       </div>
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="navbar-brand-centered">
         <ul class="nav navbar-nav">
@@ -54,284 +57,380 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
-  <!--
-  =================================
-  HEADER
-  =================================
-  -->
-  <header class="text-center">
-    <!-- ScrollDown button -->
-    <div class="scroll-down">
-      <a class="btn scroller wow animated fadeInDown" href="#works"><i class="fa fa-angle-down fa-fw"></i></a>
-    </div>
-    <section class="fondo fondo-fixed fondo-1 modulo-alto">
+  <div class="wrapper">
+    <!--
+    =================================
+    HEADER
+    =================================
+    -->
+    <header class="text-center">
+      <!-- ScrollDown button -->
+      <div class="scroll-down">
+        <a class="btn scroller wow animated fadeInDown" href="#works"><i class="fa fa-angle-down fa-fw"></i></a>
+      </div>
+      <!-- <section class="fondo fondo-fixed fondo-1 modulo-alto"></section> -->
+      <div id="carousel-header" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img class="img-responsive" alt="Responsive image" src="images/carousel1.jpg">
+          </div>
+          <div class="item">
+            <img class="img-responsive" alt="Responsive image" src="images/carrousel2.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="sider-title wow animated fadeInLeft">
+        <div class="sider-text-box">
+          <h1 class="wow animated fadeIn">
+            <img class="header-logo" src="http://placehold.it/100x100" alt="logo">
+            <!-- <b class="big">Amoiré</b> -->
+            <br>
+            Design
+          </h1>
+          <hr class="creative">
+          <p class="wow animated fadeIn">
+            Ayleen Sanhueza Romero
+          </p>
+        </div>
+      </div>
+    </header>
+    <!--
+    =================================
+    WORKS
+    =================================
+    <section id="works" class="works padding-sections back-image">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 text-justify">
+            <h1 class="big-title" style="padding: 10px 50px;">
+              Diseño Gráfico
+            </h1>
+          </div>
+          <div class="col-md-8">
+          </div>
+        </div>
+      </div>
     </section>
-    <h1><span class="big">Portafolio</span><br>Ayleen Sanhueza Romero</h1>
-  </header>
+    -->
 
-        
-
-
-  <!--
-  =================================
-  WORKS
-  =================================
-  -->
-  <section id="works" class="works padding-sections">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1>Portfolio</h1>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-              <div class="pantone-color"></div>
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
+    <section id="works" class="works padding-sections">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <h1 class="big">
+              Portafolio
+            </h1>
+            <hr class="creative">
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-12 text-center">
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active"><a class="active pantone-cyan" href="#">Logotipos</a></li>
+          <li role="presentation"><a class="active pantone-cyan" href="#">Contenido RRSS</a></li>
+          <li role="presentation"><a class="active pantone-cyan" href="#">Papelería</a></li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12">
-          <div class="work-container wow animated fadeInUp">
-            <div class="work-item">
-              <img class="img-responsive" alt="Responsive image" src="http://placehold.it/360x360">
-            </div>
-            <div class="work-description">
-              <h4>
-                <strong>LOREM IPSUM DOLOR SI</strong>
-                <br/>
-                QUASI ISTE PLACEAT ACCUSANTIUM.
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!--
-  =================================
-  ABOUT
-  =================================
-  -->
-  <section id="about" class="about padding-sections">
-    <div class="container">
-      <div class="row wow animated fadeIn">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-          <img class="img-responsive" alt="Responsive image" src="http://placehold.it/350x350">
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-12">
-          <h1>DISEÑADORA GRÁFICA</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsum officiis reprehenderit quos vero quisquam id, nostrum incidunt iure eveniet. Beatae eum, sed culpa. Quia distinctio ea deserunt veritatis similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit soluta vero neque rem doloremque quisquam odit iure voluptatibus sequi dicta eos ea magni, alias id illum! Nihil exercitationem optio harum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, sequi enim magnam doloribus, inventore perspiciatis atque fuga deleniti corrupti maiores, recusandae repellat ab nisi mollitia qui necessitatibus quae quisquam consequatur.</p>
-          <div class="row">
-            <div class="details-bio">
-              <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <i class="fa fa-lightbulb-o bio-icon" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <h3>Lorem ipsum dolor</h3>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Bannner Create instituto Arcos/Miercoles11_create.png">
+                <div class="pantone-color"></div>
               </div>
-              <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <i class="fa fa-paint-brush bio-icon" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <h3>Lorem ipsum dolor</h3>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+              <div class="work-description">
+                <h4>
+                  <strong>Instituto Arcos</strong>
+                  <br/>
+                  Diseño y Mañejo de RRSS
+                </h4>
+                <p>Creación de anuncios y piezas gráficas.</p>
+                <p>Administración Facebook, Instagram y Twitter.</p>
               </div>
-              <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="3s">
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <i class="fa fa-heart bio-icon" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9">
-                  <h3>Lorem ipsum dolor</h3>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Decomundo decoración/publicaion_decomundo.png">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Decomundo Decoracíon</strong>
+                  <br/>
+                  Diseño para RRSS
+                </h4>
+                <p>Diseño soportes digitales: Renovación de imagen (portada, perfil) y post</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Diseño tarjeta presentación Nutricionista Auriculoterapeuta/tarjeta_1.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Nutricionista Auriculoterapeuta</strong>
+                  <br/>
+                  Diseño tarjeta presentación
+                </h4>
+                <p>Imagen, composición, troquel y materialidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/FACIAL UP/MARTES 2_FacialUp.png">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Facial Up</strong>
+                  <br/>
+                  Community Manager y diseño de contenidos
+                </h4>
+                <p>Diseño y desarrollo de soportes digitales: Post, Mailing, Publicidad instagram, Facebook, Portada.</p>
+                <p>Diseño de infografías.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Interfilm Ltda./Martes 19_interfilm.png">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Interfilm Ltda</strong>
+                  <br/>
+                  Community Manager
+                </h4>
+                <p>Desarrollo de soportes digitales: Diseño y creación de post, anuncios, publicidad, infografias y portada.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Logotipo Comuna Tomé 8vaR/logotipo_final.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Logotipo comuna de Tomé 8vaR</strong>
+                  <br/>
+                  Diseño de logotipo
+                </h4>
+                <p>Ganadora de Concurso a nivel comunal.</p>
+                <p>Actual imagen de Municipalidad, Tomé Octava Región del Bío Bío.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Logotipo Nutrymás/logotipo_final_nutrymas_rgb-01.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Logotipo Nutrymás</strong>
+                  <br/>
+                  Diseño de Logotipo
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Logotipo·Papelería Sanwor/Sanwor_carta.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Constructora Sanwor Ltda.</strong>
+                  <br/>
+                  Diseño de Logotipo y papelería básica
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolore nisi eligendi Cum.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Silhouette Chile /Lateral_medida_final.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Silhouette Chile</strong>
+                  <br/>
+                  Community Manager & Diseñadora Gráfica
+                </h4>
+                <p>Diseño y desarrollo de soportes publicitarios y digitales</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/TTihone/Perfil_fp_futbolista_final.png">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>TTihone</strong>
+                  <br/>
+                  Diseño digital
+                </h4>
+                <p>Desarrollo de soportes digital.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Proyecto personal de ventas/img_casita Deco/perfil casita-01.png">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Casita Deco</strong>
+                  <br/>
+                  Diseño logotipo e imagen Corporativa
+                </h4>
+                <p>Proyecto personal, creado exclusivamente para comercializar artículos de decoración, vinilos, papelería, packaging, entre otros.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-12">
+            <div class="work-container wow animated fadeInUp">
+              <div class="work-item">
+                <img class="img-responsive" alt="Responsive image" src="images/MATERIAL_PORTAFOLIO/Khato SpA/flyer_vestido.jpg">
+              </div>
+              <div class="work-description">
+                <h4>
+                  <strong>Katho Jerez SpA</strong>
+                  <br/>
+                  Imagen Corporativa y Manejo de RRSS
+                </h4>
+                <p>Diseño y desarrollo de soportes gráficos y digitales.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
+    <section class="full-work-item padding-sections">
+      <div class="container">
+        <div class="row">
+          <div class="work-item-expanded">
+            <div class="col-md-3">
+              <div class="works-details">
+                <dl>
+                  <dt>Cliente:</dt>
+                  <dd>Instituto Arcos – Create /Cultura y actualidad.</dd>
+                  <dt>Diseño:</dt>
+                  <dd>Anuncios</dd>
+                  <dd>Administración Facebook, Instagram y Twitter</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="col-md-9">
+             <!--  <div class="hexa pull-left">
+                <div class="hex1">
+                  <div class="hex2">
+                    <img src="http://farm3.staticflickr.com/2788/4392569951_8bcec3b3ed_z.jpg?zz=1" alt="" width="320" height="313" />
+                  </div>
+                </div>
+              </div> -->
+              <div class="hexa big">
+                <div class="hex1">
+                  <div class="hex2">
+                    <img src="http://farm3.staticflickr.com/2788/4392569951_8bcec3b3ed_z.jpg?zz=1" alt="" width="800" height="500" />
+                  </div>
+                </div>
+              </div>
+              <div class="hexa pull-right">
+                <div class="hex1">
+                  <div class="hex2">
+                    <img src="http://farm3.staticflickr.com/2788/4392569951_8bcec3b3ed_z.jpg?zz=1" alt="" width="320" height="313" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+    <!-- <section class="text-center">
+      <section class="fondo fondo-fixed fondo-1 big-module poligon-module">
+      </section>
+      <h1>Contáctame</h1>
+    </section> -->
+
+
+    <!--
+    =================================
+    ABOUT
+    =================================
+    <section id="about" class="about padding-sections">
+      <div class="container">
+        <div class="row wow animated fadeIn">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <img class="img-responsive" alt="Responsive image" src="http://placehold.it/350x350">
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-12">
+            <h1>DISEÑADORA GRÁFICA</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ipsum officiis reprehenderit quos vero quisquam id, nostrum incidunt iure eveniet. Beatae eum, sed culpa. Quia distinctio ea deserunt veritatis similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit soluta vero neque rem doloremque quisquam odit iure voluptatibus sequi dicta eos ea magni, alias id illum! Nihil exercitationem optio harum.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, sequi enim magnam doloribus, inventore perspiciatis atque fuga deleniti corrupti maiores, recusandae repellat ab nisi mollitia qui necessitatibus quae quisquam consequatur.</p>
+            <div class="row">
+              <div class="details-bio">
+                <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                    <i class="fa fa-lightbulb-o bio-icon" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-xs-9">
+                    <h3>Lorem ipsum dolor</h3>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+                </div>
+                <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                    <i class="fa fa-paint-brush bio-icon" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-xs-9">
+                    <h3>Lorem ipsum dolor</h3>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+                </div>
+                <div class="col-md-4 wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="3s">
+                  <div class="col-md-3 col-sm-3 col-xs-3">
+                    <i class="fa fa-heart bio-icon" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-xs-9">
+                    <h3>Lorem ipsum dolor</h3>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui necessitatibus nesciunt dolore soluta illo aperiam sint. Facere animi repudiandae harum, aliquid ea tempore architecto labore ratione maiores, molestias ipsam doloremque.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+  </div>
   <!--
   =================================
   FOOTER
@@ -342,14 +441,35 @@
       <div class="row">
         <div class="col-xs-12">
           <p class="text-center">
-            © Ayleen Sanhueza Romero :: Diseñador Gráfico & Community Manager
+            <b>
+              © Amoiré
+            </b>
+            by Ayleen Sanhueza Romero :: Diseñadora Gráfica & Community Manager
             <br/>
-            Santiago, Chile 2016
+            <a href="mailto:ayleen.lsr@gmail.com">ayleen.lsr@gmail.com</a>
+            ::
+            <a href="tel:+569 991 270 64">+569 991 270 64</a>
+            <br/>
+            Santiago, Chile 2017
           </p>
         </div>
       </div>
     </div>
   </footer>
+  <div id="sidr">
+    <ul>
+      <li class="logo text-center">
+        <a class="scroller" href="#top">
+          <img class="sidr-logo" src="http://placehold.it/100x100">
+        </a>
+      </li>
+      <li><a class="scroller" href="#works">Works</a></li>
+      <li><a class="scroller" href="#about">Bio</a></li>
+      <li><a class="scroller" href="#works">Contact</a></li>
+      <li><a class="scroller" href="#about">Hire me</a></li>
+    </ul>
+  </div>
+  
 
 
   
@@ -365,9 +485,28 @@
   <!-- Bootstrap Core JavaScript -->
   <script type="text/javascript" src="bootstrap-3.3.7/js/bootstrap.js"></script>
 
+  <script type="text/javascript" src="js/sidr/jquery.sidr.js"></script>
+
   <!-- Smootscrolling -->
   <script src="js/smoothscrolling.jquery.js"></script>
   <script>
+    // sidr config
+    $('#mobile-menu-toggle').sidr({
+      "side": "right",
+      "name": "sidr",
+      onOpen: function onOpen() {
+        $('#mobile-menu-toggle').find('.icon').toggle();
+        $('#mobile-menu-toggle').toggleClass('is-open');
+        $('.wrapper').toggleClass('blur');
+      },
+      onClose: function onClose() {
+        $('#mobile-menu-toggle').find('.icon').toggle();
+        $('#mobile-menu-toggle').toggleClass('is-open');
+        $('.wrapper').toggleClass('blur');
+      }
+    });
+
+    $('.carousel').carousel();
     $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {
       $(this).collapse('hide');
@@ -375,29 +514,63 @@
     });
   </script>
   <script>
-    $("a.scroller").smoothscrolling(
-      { 
-    offsetTop: 60 // cantidad de pixeles que tiene el elemento flotante
+    $("a.scroller").smoothscrolling({ 
+      offsetTop: 0 // cantidad de pixeles que tiene el elemento flotante
     });
   </script>
   <!-- Carousel Slider HEADER -->
   <script type="text/javascript" src="js/carouselslider.js"></script>
 
   <script>
+    $(".navbar").hide();
+    // end preload
+    $(window).on('load', function () {
+      $('body').addClass('is-loaded');
+    });
     $(document).ready(function() {
-    //Scroll totop
-    //-----------------------------------------------
-    $(window).scroll(function() {
-      if($(this).scrollTop() != 0) {
-        $(".scrollToTop").fadeIn();
-      } else {
-        $(".scrollToTop").fadeOut();
-      }
-    });
 
-    $(".scrollToTop").click(function() {
-      $("body,html").animate({scrollTop:0},800);
-    });
+
+
+      // sidr config
+      $('#mobile-menu-toggle').sidr({
+        "side": "right",
+        "name": "sidr",
+        onOpen: function onOpen() {
+          // $('#mobile-menu-toggle').find('.icon').toggle();
+          $('#mobile-menu-toggle').toggleClass('is-open');
+          $('.wrapper').toggleClass('blur');
+        },
+        onClose: function onClose() {
+          // $('#mobile-menu-toggle').find('.icon').toggle();
+          $('#mobile-menu-toggle').toggleClass('is-open');
+          $('.wrapper').toggleClass('blur');
+        }
+      });
+
+
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('.navbar').fadeIn();
+          } else {
+            $('.navbar').fadeOut();
+          }
+        });
+      });
+
+      //Scroll totop
+      //-----------------------------------------------
+      $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+          $(".scrollToTop").fadeIn();
+        } else {
+          $(".scrollToTop").fadeOut();
+        }
+      });
+
+      $(".scrollToTop").click(function() {
+        $("body,html").animate({scrollTop:0},800);
+      });
 
     });
   </script>

@@ -2,37 +2,125 @@
 Titles -> Wox
 Subtitles -> Rio
 Parrafes -> Vegur
+
+cyan #68e4ae
+blue #5bcdc3
+orange #ff9b07
+red #f24632
+magenta #df5265
+yellow f9e932
 */
 
 
-/* HELPERS */
-.padding-sections {
-	padding: 50px 0;
+/* colors */
+.pantone-cyan {
+  color: #fff;
+  background-color: #68e4ae;
+  border: 1px dashed #68e4ae;
 }
-.no-padding {
-	padding-left: 0;
-	padding-right: 0;
+.pantone-blue {
+  color: #fff;
+  background-color: #5bcdc3;
+  border: 1px dashed #5bcdc3;
+}
+.pantone-orange {
+  color: #fff;
+  background-color: #ff9b07;
+  border: 1px dashed #ff9b07;
+}
+.pantone-red {
+  color: #fff;
+  background-color: #f24632;
+  border: 1px dashed #f24632;
+}
+.pantone-magenta {
+  color: #fff;
+  background-color: #df5265;
+  border: 1px dashed #df5265;
+}
+.pantone-yellow {
+  color: #fff;
+  background-color: #f9e932;
+  border: 1px dashed #f9e932;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
-}
 
 
+/* FONTS */
 @font-face {
-	font-family: 'Vegur-Light';
+  font-family: 'Vegur-Light';
     src: url('../fonts/original_Vegur-Light.eot?#iefix') format('embedded-opentype'), 
          url('../fonts/original_Vegur-Light.woff') format('woff'),
          url('../fonts/original_Vegur-Light.ttf') format('truetype'),
          url('../fonts/original_Vegur-Light.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
+
+/* BASICS */
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: #111111;
+  font-family: 'Vegur-Light';
+  font-size: 2em;
+}
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background: white;
+  -webkit-transition: all .55s ease-out;
+  transition: all .55s ease-out;
+  opacity: 0;
+}
+.is-loaded .wrapper {
+  opacity: 1;
+}
+.wrapper.blur {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  opacity: .55;
+}
+a {
+  color: white;
+  font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
 p {
 	font-family: 'Vegur-Light';
 	line-height: 1;
   font-size: 16px;
+}
+
+
+/* HELPERS */
+.padding-sections {
+  padding: 70px 0;
+}
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+hr.creative {
+  width: 30%;
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr.creative:after {
+  content: "*";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
 }
 
 
@@ -55,6 +143,9 @@ p {
 header {
   background-color: black;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
 }
 .fondo{
   background-size: cover;
@@ -65,36 +156,140 @@ header {
   background-position: center center;
 }
 .fondo-1 {
+  background-image: url("https://static.domain.com.au/domainblog/uploads/2017/12/08102016/2_h012om.jpg");
+  opacity: 0.5;
+  background-size: cover;
+}
+.fondo-2 {
   background-image: url("http://www.radclyffeprinters.co.uk/images/services/service12.jpg");
   opacity: 0.5;
+  background-size: cover;
 }
 .modulo-alto {
   padding: 1em;
   min-height: 90vh;
   text-align: center;
 }
-header .big {
-  font-size: 100px;
-}
-header h1{
-  position: absolute;
-  width: 100%;
-  bottom: 43%;
-  color: white;
+.big-module {
+  padding: 1em;
+  min-height: 120vh;
   text-align: center;
-  padding: 20px;
-  z-index: 999;
-  font-family: 'Vegur-Light';
 }
+.poligon-module {
+  -webkit-clip-path: polygon(0 39%, 100% 0, 100% 63%, 0 100%);
+  clip-path: polygon(0 39%, 100% 0, 100% 63%, 0 100%);
+  background-color: black;
+}
+.big {
+  font-size: 3em;
+}
+header h1 {
+  margin: 0;
+}
+h1.big-title {
+  font-size: 40px;
+  font-size: 5em;
+  font-weight: 600;
+}
+header p {
+  font-size: 3em;
+}
+.sider-title {
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  height: 100%;
+  bottom: 0;
+  color: black;
+  background-color: white;
+  width: 40%;
+  padding: 70px 100px;
+  word-break: break-word;
+  margin: 0;
+  z-index: 999;
+}
+.sider-text-box {
+  width: 300px;
+  height: auto;
+}
+.header-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  margin: 10px auto;
+}
+
+/* Fade Carousel inspired from https://codepen.io/Rowno/pen/Afykb */
+.carousel {
+  padding: 0;
+}
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.item, .item.active {
+  height: 100%;
+}
+.carousel-inner .item img {
+  opacity: 0.5;
+  height: 90vh;
+  width: 100%;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+/* just for demo purpose */
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+
 /* ScrollDown button header */
 header .scroll-down {
   position: absolute;
   width: 100%;
-  bottom: 20%;
-  text-align: center;
+  bottom: 10%;
+  text-align: right;
+  right: 5%;
   z-index: 999;
 }
-
 header .scroll-down .btn {
   height: 50px;
   width: 50px;
@@ -124,10 +319,45 @@ header .scroll-down .btn:hover {
 
 
 /* WORKS */
+
+/* Works Nav */
+ul.nav.nav-pills {
+  max-width: 500px;
+  margin: 0 auto;
+}
+ul.nav.nav-pills li a {
+  color: #ffffff;
+  background-color: #009688;
+  border: 1px solid #009688;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+ul.nav.nav-pills li a:hover {
+  color: #fff;
+  background-color: #00796B;
+  border-color: #ffffff;
+}
+
+/* Pantone Card */
 .work-container {
 	margin: 20px 0;
   background-color: #efefef;
+  /*background-color: #ffffff;*/
   color: black;
+  border: 1px solid rgba(0,0,0,0.21);
+  -webkit-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
+  -moz-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
+  box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
+}
+.work-item {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  text-align: center;
 }
 .work-description {
 	padding: 10px;
@@ -139,10 +369,9 @@ span.subtle {
 
 /* Footer */
 footer {
-	background-color: black;
+	background-color: #111111;
 	color: white;
 	padding: 20px 0 10px 0;
-	margin-top: 50px;
 }
 
 
@@ -155,6 +384,7 @@ footer {
   right: 5px;
   width: 50px;
   height: 50px;
+  border-radius: 50px;
   text-align: center;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.4);
@@ -173,8 +403,80 @@ footer {
 .scrollToTop:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+
 /* Small devices (tablets, phones less than 767px) */
 @media (max-width: 767px) {
+  /*button.navbar-toggle span.icon-bar {
+    width: 15px;
+    height: 4px;
+    border-radius: 0;
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -ms-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+  }
+  button.navbar-toggle:focus,
+  button.navbar-toggle:hover {
+    background-color: white;
+  }
+  button.navbar-toggle:focus span.icon-bar,
+  button.navbar-toggle:hover span.icon-bar {
+    background-color: #333;
+  }
+*/
+  .navbar-transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  #mobile-menu-toggle {
+    border: none;
+    background: transparent !important;
+    float: none;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    margin: 0 auto;
+  }
+  #mobile-menu-toggle.is-open {
+    right: 49%;
+  }
+  #mobile-menu-toggle:hover {
+    background: transparent !important;
+  }
+  #mobile-menu-toggle .icon-bar {
+    width: 22px;
+    height: 4px;
+    border-radius: none;
+    background-color: #333;
+    transition: all 0.2s;
+  }
+  #mobile-menu-toggle.is-open .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 0% 90%;
+  }
+  #mobile-menu-toggle.is-open .middle-bar {
+    opacity: 0;
+  }
+  #mobile-menu-toggle.is-open .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 5% 10%;
+  }
+  #mobile-menu-toggle .top-bar {
+    transform: rotate(0);
+  }
+  #mobile-menu-toggle .middle-bar {
+    opacity: 1;
+  }
+  #mobile-menu-toggle .bottom-bar {
+    transform: rotate(0);
+  }
+
+
   .scrollToTop {
     width: 40px;
     height: 40px;
@@ -184,6 +486,32 @@ footer {
     line-height: 35px;
     font-size: 20px;
   }
+  header .scroll-down {
+    bottom: 5%;
+  }
+  .sider-title {
+    width: 50%;
+    padding: 20px 40px;
+    height: 90vh;
+  }
+  .sider-text-box {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    width: 150px;
+    height: auto;
+  }
+  .big {
+  font-size: 2em;
+  }
+  header p {
+    font-size: 2em;
+  }
+  .nav.nav-pills li {
+    display: block;
+    width: 100%;
+  }
+
 }
 
 
@@ -197,4 +525,209 @@ footer {
   .navbar>.container-fluid .navbar-brand-centered {
       margin-left: -120px;
   }
+}
+
+
+
+
+#sidr {
+  background: #111111;
+  box-shadow: none !important;
+}
+.sidr ul {
+  border-bottom: 1px solid transparent !important;
+}
+.sidr ul li {
+  border-top: 1px solid transparent !important;
+}
+.sidr ul li a, 
+.sidr ul li span {
+  font-weight: 300;
+}
+#sidr li.logo img.sidr-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin: 30px auto;
+}
+
+/*#sidr ul {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+#sidr ul .santander-logo {
+  display: block;
+  text-align: center;
+  padding: 14px 0;
+}
+#sidr ul .logo a {
+  display: inline-block;
+  -webkit-transform: scale(0.8) translateY(5px);
+  transform: scale(0.8) translateY(5px);
+}
+#sidr ul li:first-of-type {
+  text-align: left;
+}
+#sidr ul li a {
+  color: white;
+  text-decoration: none;
+}
+#sidr ul li:not(.logo) a:not(.social) {
+  display: block;
+  font-size: 12px;
+  -webkit-box-shadow: 0 0 1px black inset;
+  box-shadow: 0 0 1px black inset;
+  margin-top: -1px;
+}
+#sidr ul li:not(:first-of-type) a:not(.social).active {
+  background: #4c4a4e;
+}
+#sidr ul li:not(:first-of-type) a.social {
+  margin: 0 15px;
+}
+#sidr ul li:not(:first-of-type) a.social:first-of-type {
+  margin-left: 5px;
+}
+#sidr ul li:not(:first-of-type) a.social:last-of-type {
+  margin-right: 5px;
+}
+#sidr ul li.text-center {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#sidr .mobile-menu--search {
+  background: #4c4a4e;
+  padding: 20px;
+  position: relative;
+}
+#sidr .mobile-menu--search i.fa {
+  color: #CCC;
+  position: absolute;
+  top: 33px;
+  left: 33px;
+}
+#sidr .mobile-menu--search .form-control {
+  padding-left: 33px;
+}
+#sidr .login {
+  background: #EC0000;
+}
+#sidr .dropdown-menu li a:hover,
+#sidr .dropdown-menu li a:focus,
+#sidr .nav li a:hover,
+#sidr .nav li a:focus {
+  background-color: transparent;
+}
+#sidr .header_user-avatar {
+  width: 35px;
+  height: 35px;
+}
+
+.sidr {
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 1999;
+  width: 260px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sidr.right {
+  left: auto;
+  right: -260px;
+}
+.sidr.left {
+  left: -260px;
+  right: auto;
+}
+*/
+
+
+
+.work-image {
+  height: 300px;
+  height: auto;
+  display: inline;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+#parallelogram {
+  width: 250px;
+  min-height: 630px;
+  height: 100%;
+  -webkit-transform: skew(20deg);
+     -moz-transform: skew(20deg);
+       -o-transform: skew(20deg);
+  /*background: red;*/
+  overflow: hidden;
+}
+
+.back-image {
+  background-image: url("images/back-img.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.img {
+  background-image: url("http://www.radclyffeprinters.co.uk/images/services/service12.jpg");
+}
+
+
+
+/* WORKS EXPANDED */
+/*
+ * ==== hexagon
+ */
+.full-work-item {
+  position: relative;
+}
+.works-details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 10%;
+}
+dt {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+}
+
+.hexa.big {
+  width: 100%;
+  height: 100%;
+}
+.hexa.pull-right {
+  margin-top: -230px;
+}
+.hexa.pull-left {
+  margin-top: 230px;
 }
