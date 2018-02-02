@@ -12,7 +12,11 @@ yellow f9e932
 */
 
 
-/* colors */
+/* 
+=======================================
+COLORS
+=======================================
+*/
 .pantone-cyan {
   color: #fff;
   background-color: #68e4ae;
@@ -46,7 +50,11 @@ yellow f9e932
 
 
 
-/* FONTS */
+/* 
+=======================================
+FONTS
+=======================================
+*/
 @font-face {
   font-family: 'Vegur-Light';
     src: url('../fonts/original_Vegur-Light.eot?#iefix') format('embedded-opentype'), 
@@ -58,7 +66,11 @@ yellow f9e932
 }
 
 
-/* BASICS */
+/* 
+=======================================
+BASICS & HELPERS
+=======================================
+*/
 body {
   -webkit-font-smoothing: subpixel-antialiased;
   background: #111111;
@@ -94,11 +106,8 @@ p {
 	line-height: 1;
   font-size: 16px;
 }
-
-
-/* HELPERS */
 .padding-sections {
-  padding: 70px 0;
+  padding: 50px 0;
 }
 .no-padding {
   padding-left: 0;
@@ -124,29 +133,53 @@ hr.creative:after {
 }
 
 
-/* NAV CENTER */
+
+/* 
+=======================================
+CENTER NAV 
+=======================================
+*/
 .navbar-brand-centered {
-    position: absolute;
-    left: 50%;
-    display: block;
-    width: 160px;
-    text-align: center;
-    background-color: transparent;
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 200px;
+  text-align: center;
+  background-color: transparent;
 }
 .navbar>.container .navbar-brand-centered, 
 .navbar>.container-fluid .navbar-brand-centered {
-    margin-left: -150px;
+  margin-left: -150px;
+}
+.nav.navbar-nav.navbar-left {
+  margin-left: 50px;
+}
+.nav.navbar-nav.navbar-right {
+  margin-right: 50px;
+}
+.navbar-brand {
+  overflow: hidden;
+}
+.nav.navbar-nav li {
+  width: 100px;
+  text-align: center;
 }
 
 
-/* HEADER */
+/* 
+=======================================
+HEADER FADE CARRUSEL
+=======================================
+*/
 header {
   background-color: black;
   width: 100%;
   position: relative;
   overflow: hidden;
-  min-height: 90vh;
+  height: 90vh;
 }
+
+
 .fondo{
   background-size: cover;
 }
@@ -219,7 +252,12 @@ header p {
   margin: 10px auto;
 }
 
-/* Fade Carousel inspired from https://codepen.io/Rowno/pen/Afykb */
+/* Fade Carousel */
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
 .carousel {
   padding: 0;
 }
@@ -240,7 +278,6 @@ header p {
 .carousel-fade .carousel-inner .prev.right {
   opacity: 1;
 }
-
 .carousel-fade .carousel-control {
   z-index: 2;
 }
@@ -272,12 +309,6 @@ header p {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-}
-/* just for demo purpose */
-.carousel,
-.carousel-inner,
-.carousel-inner .item {
-  height: 100%;
 }
 
 
@@ -318,8 +349,11 @@ header .scroll-down .btn:hover {
 }
 
 
-/* WORKS */
-
+/* 
+=======================================
+WORKS
+=======================================
+*/
 /* Works Nav */
 ul.nav.nav-pills {
   max-width: 500px;
@@ -344,30 +378,43 @@ ul.nav.nav-pills li a:hover {
 /* Pantone Card */
 .work-container {
 	margin: 20px 0;
-  background-color: #efefef;
+  background-color: #f5f6fa;
   /*background-color: #ffffff;*/
   color: black;
-  border: 1px solid rgba(0,0,0,0.21);
+  /*border: 1px solid rgba(0,0,0,0.21);*/
   -webkit-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
   -moz-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
   box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
 }
 .work-item {
-  height: 300px;
+  height: 250px;
   width: 100%;
   overflow: hidden;
   background-color: #ffffff;
   text-align: center;
 }
+.work-item img {
+  display: inline-block;
+  vertical-align: middle;
+  /*max-height: 100%;*/
+  max-width: 100%;
+}
 .work-description {
 	padding: 10px;
+}
+.work-description h4 {
+  text-transform: uppercase;
 }
 span.subtle {
 	font-family: 'Vegur-Light';
 }
 
 
-/* Footer */
+/* 
+=======================================
+FOOTER
+=======================================
+*/
 footer {
 	background-color: #111111;
 	color: white;
@@ -376,7 +423,11 @@ footer {
 
 
 
-/* Scroll to top Button */
+/* 
+=======================================
+SCROLL TO TOP BUTTON
+=======================================
+*/
 .scrollToTop {
   color: #fff;
   position: fixed;
@@ -407,7 +458,11 @@ footer {
 
 
 
-
+/* 
+=======================================
+MEDIA QUERIES
+=======================================
+*/
 /* Small devices (tablets, phones less than 767px) */
 @media (max-width: 767px) {
   /*button.navbar-toggle span.icon-bar {
@@ -434,27 +489,42 @@ footer {
     border-color: transparent;
   }
   #mobile-menu-toggle {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
     border: none;
-    background: transparent !important;
+    /*background: transparent !important;*/
     float: none;
     position: absolute;
-    top: 30%;
-    right: 5%;
-    margin: 0 auto;
+    top: 20%;
+    right: 2%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
     z-index: 10;
   }
   /*#mobile-menu-toggle.is-open {
     right: 49%;
   }*/
   #mobile-menu-toggle:hover {
-    background: transparent !important;
+    /*background: transparent !important;*/
+    background-color: rgba(0, 0, 0, 0.6);
   }
   #mobile-menu-toggle .icon-bar {
-    width: 22px;
+    width: 20px;
     height: 4px;
     border-radius: 0px;
-    background-color: #333;
+    background-color: #FFF;
     transition: all 0.2s;
+    margin: 3px auto;
   }
   #mobile-menu-toggle.is-open .top-bar {
     transform: rotate(45deg);
@@ -515,12 +585,6 @@ footer {
   }
 
 }
-
-
-
-
-
-
 /* 767px and Up */
 @media (min-width: 767px) {
   .navbar>.container .navbar-brand-centered, 
@@ -531,7 +595,11 @@ footer {
 
 
 
-
+/* 
+=======================================
+SIDR MOBILE MENÚ
+=======================================
+*/
 #sidr {
   background: #111111;
   box-shadow: none !important;
@@ -555,99 +623,6 @@ footer {
   border-radius: 100px;
   margin: 30px auto;
 }
-
-/*#sidr ul {
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-#sidr ul .santander-logo {
-  display: block;
-  text-align: center;
-  padding: 14px 0;
-}
-#sidr ul .logo a {
-  display: inline-block;
-  -webkit-transform: scale(0.8) translateY(5px);
-  transform: scale(0.8) translateY(5px);
-}
-#sidr ul li:first-of-type {
-  text-align: left;
-}
-#sidr ul li a {
-  color: white;
-  text-decoration: none;
-}
-#sidr ul li:not(.logo) a:not(.social) {
-  display: block;
-  font-size: 12px;
-  -webkit-box-shadow: 0 0 1px black inset;
-  box-shadow: 0 0 1px black inset;
-  margin-top: -1px;
-}
-#sidr ul li:not(:first-of-type) a:not(.social).active {
-  background: #4c4a4e;
-}
-#sidr ul li:not(:first-of-type) a.social {
-  margin: 0 15px;
-}
-#sidr ul li:not(:first-of-type) a.social:first-of-type {
-  margin-left: 5px;
-}
-#sidr ul li:not(:first-of-type) a.social:last-of-type {
-  margin-right: 5px;
-}
-#sidr ul li.text-center {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#sidr .mobile-menu--search {
-  background: #4c4a4e;
-  padding: 20px;
-  position: relative;
-}
-#sidr .mobile-menu--search i.fa {
-  color: #CCC;
-  position: absolute;
-  top: 33px;
-  left: 33px;
-}
-#sidr .mobile-menu--search .form-control {
-  padding-left: 33px;
-}
-#sidr .login {
-  background: #EC0000;
-}
-#sidr .dropdown-menu li a:hover,
-#sidr .dropdown-menu li a:focus,
-#sidr .nav li a:hover,
-#sidr .nav li a:focus {
-  background-color: transparent;
-}
-#sidr .header_user-avatar {
-  width: 35px;
-  height: 35px;
-}
-
-.sidr {
-  display: block;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 1999;
-  width: 260px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.sidr.right {
-  left: auto;
-  right: -260px;
-}
-.sidr.left {
-  left: -260px;
-  right: auto;
-}
-*/
 
 
 
