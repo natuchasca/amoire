@@ -17,35 +17,122 @@ yellow f9e932
 COLORS
 =======================================
 */
+button.btn-pantone {
+  color: #ffffff;
+  -webkit-transition: all 800ms ease-in-out;
+  -moz-transition: all 800ms ease-in-out;
+  -ms-transition: all 800ms ease-in-out;
+  -o-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  font-size: 16px;
+  font-weight: 600;
+}
 .pantone-cyan {
   color: #fff;
-  background-color: #68e4ae;
-  border: 1px dashed #68e4ae;
+  background-color: #009688;
+  border: 1px dashed #009688;
 }
+button.btn-pantone.cyan {
+  color: #ffffff;
+  background-color: #009688;
+  border: 1px solid #009688;
+}
+button.btn-pantone.cyan:hover,
+button.btn-pantone.cyan.active {
+  box-shadow: none;
+  color: #00796B;
+  background-color: #ffffff;
+  border-color: #00796B;
+}
+
 .pantone-blue {
   color: #fff;
   background-color: #5bcdc3;
   border: 1px dashed #5bcdc3;
 }
+button.btn-pantone.blue {
+  color: #5bcdc3;
+  background-color: #ffffff;
+  border: 1px solid #5bcdc3;
+}
+button.btn-pantone.blue:hover,
+button.btn-pantone.blue.active {
+  box-shadow: none;
+  color: #ffffff;
+  background-color: #5bcdc3;
+  border-color: #5bcdc3;
+}
+
 .pantone-orange {
   color: #fff;
   background-color: #ff9b07;
   border: 1px dashed #ff9b07;
 }
+button.btn-pantone.orange {
+  color: #ff9b07;
+  background-color: #ffffff;
+  border: 1px solid #ff9b07;
+}
+button.btn-pantone.orange:hover,
+button.btn-pantone.orange.active {
+  box-shadow: none;
+  color: #ffffff;
+  background-color: #ff9b07;
+  border-color: #ff9b07;
+}
+
 .pantone-red {
   color: #fff;
   background-color: #f24632;
   border: 1px dashed #f24632;
 }
+button.btn-pantone.red {
+  color: #f24632;
+  background-color: #ffffff;
+  border: 1px solid #f24632;
+}
+button.btn-pantone.red:hover,
+button.btn-pantone.red.active {
+  box-shadow: none;
+  color: #ffffff;
+  background-color: #f24632;
+  border-color: #f24632;
+}
+
 .pantone-magenta {
   color: #fff;
   background-color: #df5265;
   border: 1px dashed #df5265;
 }
+button.btn-pantone.magenta {
+  color: #df5265;
+  background-color: #ffffff;
+  border: 1px solid #df5265;
+}
+button.btn-pantone.magenta:hover,
+button.btn-pantone.magenta.active {
+  box-shadow: none;
+  color: #ffffff;
+  background-color: #df5265;
+  border-color: #df5265;
+}
+
 .pantone-yellow {
   color: #fff;
   background-color: #f9e932;
   border: 1px dashed #f9e932;
+}
+button.btn-pantone.yellow {
+  color: #f9e932;
+  background-color: #ffffff;
+  border: 1px solid #f9e932;
+}
+button.btn-pantone.yellow:hover,
+button.btn-pantone.yellow.active {
+  box-shadow: none;
+  color: #ffffff;
+  background-color: #f9e932;
+  border-color: #f9e932;
 }
 
 
@@ -176,7 +263,7 @@ header {
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 90vh;
+  height: 100vh;
 }
 
 
@@ -200,7 +287,7 @@ header {
 }
 .modulo-alto {
   padding: 1em;
-  min-height: 90vh;
+  min-height: 100vh;
   text-align: center;
 }
 .big-module {
@@ -225,7 +312,7 @@ h1.big-title {
   font-weight: 600;
 }
 header p {
-  font-size: 3em;
+  font-size: 2.3em;
 }
 .sider-title {
   position: absolute;
@@ -286,7 +373,7 @@ header p {
 }
 .carousel-inner .item img {
   opacity: 0.5;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 }
 @media all and (transform-3d), (-webkit-transform-3d) {
@@ -355,7 +442,7 @@ WORKS
 =======================================
 */
 /* Works Nav */
-ul.nav.nav-pills {
+/*ul.nav.nav-pills {
   max-width: 500px;
   margin: 0 auto;
 }
@@ -373,6 +460,9 @@ ul.nav.nav-pills li a:hover {
   color: #fff;
   background-color: #00796B;
   border-color: #ffffff;
+}*/
+.works-buttons {
+  margin: 10px auto;
 }
 
 /* Pantone Card */
@@ -382,9 +472,9 @@ ul.nav.nav-pills li a:hover {
   /*background-color: #ffffff;*/
   color: black;
   /*border: 1px solid rgba(0,0,0,0.21);*/
-  -webkit-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
-  -moz-box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
-  box-shadow: 10px 10px 6px -5px rgba(0,0,0,0.21);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
 .work-item {
   height: 250px;
@@ -400,14 +490,33 @@ ul.nav.nav-pills li a:hover {
   max-width: 100%;
 }
 .work-description {
+  height: 50px;
 	padding: 10px;
 }
-.work-description h4 {
+.work-description h5 {
   text-transform: uppercase;
+  margin: 0;
+  font-size: 16px;
+}
+.work-description h5 span {
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 300;
 }
 span.subtle {
 	font-family: 'Vegur-Light';
 }
+
+
+/* 
+=======================================
+BIO
+=======================================
+*/
+.bio-img {
+  margin-top: 25px;
+}
+
 
 
 /* 
@@ -455,6 +564,107 @@ SCROLL TO TOP BUTTON
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+
+
+/* WORKS EXPANDED */
+/*
+ * ==== hexagon
+ */
+.full-work-item {
+  position: relative;
+}
+.works-details {
+  width: 100%;
+  height: 100%;
+  /*position: absolute;
+  bottom: 10%;*/
+}
+dt {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+
+.hexa {
+  width: 325px;
+  height: 230px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+}
+
+.hexa.big {
+  width: 100%;
+  height: 100%;
+}
+.hexa.pull-right {
+  margin-top: -230px;
+}
+.hexa.pull-left {
+  margin-top: 230px;
+}
+
+
+
+/* img grid */
+.wrapper-grid {
+  margin: 40px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 32% 32% 32%;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  /*background-color: #444;*/
+  color: #fff;
+  /*border-radius: 5px;
+  padding: 20px;*/
+  /*font-size: 150%;*/
+  /*max-height: 300px;*/
+  overflow: hidden;
+  color: #000;
+  border: 1px dashed black;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.a {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.b {
+  grid-column: 3 ;
+  grid-row: 1 / 3;
+}
+.c {
+  grid-column: 1 ;
+  grid-row: 2 ;
+}
+.d {
+  grid-column: 2;
+  grid-row: 2;
+}
 
 
 
@@ -563,7 +773,7 @@ MEDIA QUERIES
   .sider-title {
     width: 60%;
     padding: 20px 40px;
-    height: 90vh;
+    height: 100vh;
   }
   .sider-text-box {
     position: absolute;
@@ -578,10 +788,29 @@ MEDIA QUERIES
   header p {
     font-size: 2em;
   }
-  .nav.nav-pills li {
+  .btn-pantone {
     display: block;
     width: 100%;
     margin: 2px;
+  }
+  .wrapper-grid {
+    margin: 10px;
+  }
+  .a {
+    grid-column: 1 / 4;
+    grid-row: 2;
+  }
+  .b {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+  .c {
+    grid-column: 1 / 4;
+    grid-row: 1 ;
+  }
+  .d {
+    grid-column: 1 / 4;
+    grid-row: 4;
   }
 
 }
@@ -590,6 +819,17 @@ MEDIA QUERIES
   .navbar>.container .navbar-brand-centered, 
   .navbar>.container-fluid .navbar-brand-centered {
       margin-left: -120px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header p {
+    font-size: 2em;
+  }
+  .sider-title {
+    width: 60%;
+    padding: 20px 40px;
+    height: 100vh;
   }
 }
 
@@ -646,68 +886,11 @@ SIDR MOBILE MENÚ
 }
 
 .back-image {
-  background-image: url("images/back-img.png");
+  background-image: url("carousel1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .img {
   background-image: url("http://www.radclyffeprinters.co.uk/images/services/service12.jpg");
-}
-
-
-
-/* WORKS EXPANDED */
-/*
- * ==== hexagon
- */
-.full-work-item {
-  position: relative;
-}
-.works-details {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 10%;
-}
-dt {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  margin-top: 10px;
-}
-.hexa, .hexa div {
-  margin: 0 auto;
-  transform-origin: 50% 50%;
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-}
-
-.hexa {
-  width: 325px;
-  height: 230px;
-}
-.hexa div {
-  width: 100%;
-  height: 100%;
-}
-.hexa {
-  transform: rotate(120deg);
-}
-.hex1 {
-  transform: rotate(-60deg);
-}
-.hex2 {
-  transform: rotate(-60deg);
-}
-
-.hexa.big {
-  width: 100%;
-  height: 100%;
-}
-.hexa.pull-right {
-  margin-top: -230px;
-}
-.hexa.pull-left {
-  margin-top: 230px;
 }

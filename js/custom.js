@@ -68,4 +68,23 @@ $(document).ready(function() {
     $("body,html").animate({scrollTop:0},800);
   });
 
+  // Filter works gallery
+  $(".filter-button").click(function(){
+    var value = $(this).attr('data-filter');
+    
+    $(this).siblings().removeClass('active');
+    $(this).toggleClass('active');
+
+    if($(this).hasClass('active')) {
+      $('.work-container').addClass('wow animated fadeIn')
+    }
+
+    if(value == "all") {
+      $('.filter').show('1000');
+    }
+    else {
+      $(".filter").not('.'+value).hide('3000');
+      $('.filter').filter('.'+value).show('3000');
+    }
+  });
 });
