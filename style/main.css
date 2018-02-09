@@ -226,6 +226,10 @@ hr.creative:after {
 CENTER NAV 
 =======================================
 */
+.navbar-inverse {
+  background-color: #111111;
+  border-color: #111111;
+}
 .navbar-brand-centered {
   position: absolute;
   left: 50%;
@@ -476,6 +480,9 @@ ul.nav.nav-pills li a:hover {
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
+.work-container a {
+  text-decoration: none;
+}
 .work-item {
   height: 250px;
   width: 100%;
@@ -492,6 +499,7 @@ ul.nav.nav-pills li a:hover {
 .work-description {
   height: 50px;
 	padding: 10px;
+  color: #000000;
 }
 .work-description h5 {
   text-transform: uppercase;
@@ -514,7 +522,7 @@ BIO
 =======================================
 */
 .bio-img {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 
@@ -668,6 +676,147 @@ dt {
 
 
 
+
+/* 
+=======================================
+SIDR MOBILE MENÚ
+=======================================
+*/
+#sidr {
+  background: #111111;
+  box-shadow: none !important;
+}
+.sidr {
+  z-index: 9 !important;
+}
+.sidr ul {
+  border-bottom: 1px solid transparent !important;
+}
+.sidr ul li {
+  border-top: 1px solid transparent !important;
+}
+.sidr ul li a, 
+.sidr ul li span {
+  font-weight: 300;
+}
+#sidr li.logo img.sidr-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  margin: 30px auto;
+}
+
+
+
+.work-image {
+  height: 300px;
+  height: auto;
+  display: inline;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+#parallelogram {
+  width: 250px;
+  min-height: 630px;
+  height: 100%;
+  -webkit-transform: skew(20deg);
+     -moz-transform: skew(20deg);
+       -o-transform: skew(20deg);
+  /*background: red;*/
+  overflow: hidden;
+}
+
+.back-image {
+  background-image: url("carousel1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img {
+  background-image: url("http://www.radclyffeprinters.co.uk/images/services/service12.jpg");
+}
+
+
+
+.hexagon {
+  position: relative;
+  width: 200px; 
+  height: 115.47px;
+  background-color: #ffffff;
+  /*background: linear-gradient(-45deg, rgb(8, 174, 234) 0%, rgb(42, 245, 152) 100%);*/
+  margin: 57.74px 0;
+  border-left: solid 2px #000000;
+  border-right: solid 2px #000000;
+  left: 0; 
+  right: 0; 
+  margin-left: auto;
+  margin-right: auto;
+}
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 141.42px;
+  height: 141.42px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 27.2893px;
+}
+.hexagon:before {
+  top: -70.7107px;
+  border-top: solid 2.8284px #000000;
+  border-right: solid 2.8284px #000000;
+}
+.hexagon:after {
+  bottom: -70.7107px;
+  border-bottom: solid 2.8284px #000000;
+  border-left: solid 2.8284px #000000;
+}
+.text{
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: -50px;
+  text-align: center;
+}
+
+
+
+
+/* 
+=======================================
+WORKS EXPANDED
+=======================================
+*/
+.work-expanded {
+  padding-top: 50px;
+}
+.fixed-work-description {
+  height: 100%;
+  min-height: 90vh;
+  padding: 100px 10px;
+  position: fixed;
+  width: inherit;
+}
+.fixed-work-description h1 {
+  font-family: 'Vegur-Light';
+}
+.work-images-grid {
+  height: 100%;
+  min-height: 90vh;
+}
+.work-images-grid img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+
+
 /* 
 =======================================
 MEDIA QUERIES
@@ -813,6 +962,11 @@ MEDIA QUERIES
     grid-row: 4;
   }
 
+  .fixed-work-description {
+    position: relative;
+    display: block;
+  }
+
 }
 /* 767px and Up */
 @media (min-width: 767px) {
@@ -831,66 +985,4 @@ MEDIA QUERIES
     padding: 20px 40px;
     height: 100vh;
   }
-}
-
-
-
-/* 
-=======================================
-SIDR MOBILE MENÚ
-=======================================
-*/
-#sidr {
-  background: #111111;
-  box-shadow: none !important;
-}
-.sidr {
-  z-index: 9 !important;
-}
-.sidr ul {
-  border-bottom: 1px solid transparent !important;
-}
-.sidr ul li {
-  border-top: 1px solid transparent !important;
-}
-.sidr ul li a, 
-.sidr ul li span {
-  font-weight: 300;
-}
-#sidr li.logo img.sidr-logo {
-  height: 100px;
-  width: 100px;
-  border-radius: 100px;
-  margin: 30px auto;
-}
-
-
-
-.work-image {
-  height: 300px;
-  height: auto;
-  display: inline;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-
-#parallelogram {
-  width: 250px;
-  min-height: 630px;
-  height: 100%;
-  -webkit-transform: skew(20deg);
-     -moz-transform: skew(20deg);
-       -o-transform: skew(20deg);
-  /*background: red;*/
-  overflow: hidden;
-}
-
-.back-image {
-  background-image: url("carousel1.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.img {
-  background-image: url("http://www.radclyffeprinters.co.uk/images/services/service12.jpg");
 }
