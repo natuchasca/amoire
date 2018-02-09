@@ -121,9 +121,9 @@ function works() {
       client: "Eyleen Quinteros – Nutricionista Auriculoterapeuta",
       designdetail: "Diseño tarjeta presentación. Imagen, composición, troquel y materialidad",
       images: [ 
-        "images/material_portafolio/Nutricionista/tarjeta_1.jpg",
-        "images/material_portafolio/Nutricionista/tarjeta_2.jpg",
-        "images/material_portafolio/Nutricionista/tarjeta_3.jpg",
+        "images/material_portafolio/nutricionista/tarjeta_1.jpg",
+        "images/material_portafolio/nutricionista/tarjeta_2.jpg",
+        "images/material_portafolio/nutricionista/tarjeta_3.jpg",
       ]
     },
     {
@@ -212,9 +212,9 @@ function works() {
       client: "TTihone",
       designdetail: "Desarrollo de soportes digital (Publicidad, Mailing, Diseño de portada, Anuncios y post)",
       images: [
-        "images/material_portafolio/ttihone/mailing_blanco.jpg",
+        "images/material_portafolio/ttihone/mailingblanco.jpg",
         "images/material_portafolio/ttihone/mailing.jpg",
-        "images/material_portafolio/ttihone/Perfil_fp_futbolista_final.png",
+        "images/material_portafolio/ttihone/perfilfutbolista.png",
       ]
     },
     {
