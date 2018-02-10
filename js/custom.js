@@ -95,6 +95,7 @@ function works() {
     {
       key: "arcos",
       title: "Instituto Arcos Create",
+      year: "2016",
       client: "Instituto Arcos Create - Cultura y actualidad",
       designdetail: "Anuncios, Administración Facebook, Instagram y Twitter",
       images: [
@@ -106,6 +107,7 @@ function works() {
     {
       key: "decomundo",
       title: "Decomundo Decoracíon",
+      year: "2017",
       client: "Decomundo Decoracíon",
       designdetail: "Diseño soportes digitales: Renovación de imagen (portada, perfil) y contenido redes sociales",
       images: [ 
@@ -118,6 +120,7 @@ function works() {
     {
       key: "auriculoterapeuta",
       title: "Nutricionista Auriculoterapeuta",
+      year: "2017",
       client: "Eyleen Quinteros – Nutricionista Auriculoterapeuta",
       designdetail: "Diseño tarjeta presentación. Imagen, composición, troquel y materialidad",
       images: [ 
@@ -129,6 +132,7 @@ function works() {
     {
       key: "facialup",
       title: "Facial Up",
+      year: "2016",
       client: "Facial Up",
       designdetail: "Diseño y desarrollo de soportes digitales: Post, Mailing, publicidad instagram, Fb portada y diseño de infografías",
       images: [ 
@@ -146,6 +150,7 @@ function works() {
     {
       key: "interfilm",
       title: "Interfilm Ltda.",
+      year: "2016",
       client: "Interfilm Ltda.",
       designdetail: "Desarrollo de soportes digitales: Diseño y creación de post y contenido redes sociales. Anuncios, publicidad e infografías",
       images: [
@@ -161,8 +166,19 @@ function works() {
       ]
     },
     {
+      key: "propiedades",
+      title: "Corretaje de propiedades",
+      year: "2015",
+      client: "Nancy Romero - Corretaje de propiedades",
+      designdetail: "Diseño de logotipo",
+      images: [
+        "images/material_portafolio/propiedades/logotipo_propiedades.jpg",
+      ]
+    },
+    {
       key: "tome",
       title: "Comuna de Tomé 8vaR",
+      year: "2014",
       client: "Comuna de Tomé 8vaR",
       designdetail: "Diseño de logotipo. Ganadora de Concurso a nivel comunal. Actual imagen de Municipalidad, Tomé Octava Región del Bío Bío",
       images: [
@@ -172,6 +188,7 @@ function works() {
     {
       key: "sanwor",
       title: "Sanwor Ltda.",
+      year: "2015",
       client: "Sanwor Ltda.",
       designdetail: "Diseño de Logotipo y papelería básica",
       images: [
@@ -184,6 +201,7 @@ function works() {
     {
       key: "silhouette",
       title: "Silhouette Chile",
+      year: "2017",
       client: "Silhouette Chile",
       designdetail: "Desarrollo de soportes publicitarios (Diseño y composición de lateral revista Materia prima, Creación de Catálogo y  Packaging). Desarrollo de soportes digital (Anuncios, post, mailing, concursos, redes sociales)",
       images: [
@@ -200,6 +218,7 @@ function works() {
     {
       key: "nutrymas",
       title: "Nutrymás",
+      year: "2017",
       client: "Nutrymás – Clínica Nutrición y Dietética",
       designdetail: "Diseño de Logotipo",
       images: [
@@ -209,6 +228,7 @@ function works() {
     {
       key: "ttihone",
       title: "TTihone",
+      year: "2016",
       client: "TTihone",
       designdetail: "Desarrollo de soportes digital (Publicidad, Mailing, Diseño de portada, Anuncios y post)",
       images: [
@@ -220,6 +240,7 @@ function works() {
     {
       key: "casitadeco",
       title: "Casita Deco",
+      year: "2017",
       client: "Casita Deco",
       designdetail: "Diseño logotipo, imagen corporativa y administración de contenido en redes sociales. Proyecto personal, creado exclusivamente para comercializar artículos de decoración, vinilos, papelería, packaging, entre otros",
       images: [
@@ -231,6 +252,7 @@ function works() {
     {
       key: "katho",
       title: "Katho Jerez SpA",
+      year: "2016",
       client: "Katho Jerez SpA – Marketing Digital",
       designdetail: "Imagen Corporativa y Manejo de RRSS. Diseño y desarrollo de soportes gráficos (Pendón, tarjetas de presentación, planificador, separador de páginas, caluga soporte editorial). Desarrollo soportes digital (Anuncios promocionales, post, mailing, recursos gráficos y publicidad en redes sociales)",
       images: [
@@ -243,7 +265,33 @@ function works() {
         "images/material_portafolio/katho/Promocion_15_noviembre.png",
         "images/material_portafolio/katho/Separador.jpg",
       ]
-      
+    },
+    {
+      key: "revista",
+      title: "Revista Viajero",
+      year: "2011",
+      client: "Transportes Línea Azul",
+      designdetail: "Diseño y diagramación de revista",
+      images: [
+        "images/material_portafolio/revista_viajero/revista.png",
+        "images/material_portafolio/revista_viajero/revista2.jpg",
+        "images/material_portafolio/revista_viajero/revista3.jpg",
+        "images/material_portafolio/revista_viajero/revista4.jpg",
+        "images/material_portafolio/revista_viajero/revista5.jpg",
+        "images/material_portafolio/revista_viajero/revista6.jpg",
+        "images/material_portafolio/revista_viajero/revista7.jpg",
+        "images/material_portafolio/revista_viajero/revista8.jpg",
+        "images/material_portafolio/revista_viajero/revista9.jpg",
+        "images/material_portafolio/revista_viajero/revista10.jpg",
+        "images/material_portafolio/revista_viajero/revista11.jpg",
+        "images/material_portafolio/revista_viajero/revista12.jpg",
+        "images/material_portafolio/revista_viajero/revista13.jpg",
+        "images/material_portafolio/revista_viajero/revista14.jpg",
+        "images/material_portafolio/revista_viajero/revista15.jpg",
+        "images/material_portafolio/revista_viajero/revista16.jpg",
+        "images/material_portafolio/revista_viajero/revista17.jpg",
+        "images/material_portafolio/revista_viajero/revista18.jpg",
+      ]
     }
   ]
 
@@ -254,6 +302,7 @@ function works() {
 
   if (data && data.hasOwnProperty('key')) {
     $(".title").text(data.title);
+    $(".year").text(data.year);
     $(".client").text(data.client);
     $(".design-detail").text(data.designdetail);
     

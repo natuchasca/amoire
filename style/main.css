@@ -230,13 +230,19 @@ CENTER NAV
   background-color: #111111;
   border-color: #111111;
 }
-.navbar-brand-centered {
+.navbar-brand.navbar-brand-centered {
   position: absolute;
   left: 50%;
   display: block;
   width: 200px;
   text-align: center;
   background-color: transparent;
+  padding: 0;
+  overflow: visible;
+}
+.navbar-brand-centered a img {
+  height: 100px;
+  width: auto;
 }
 .navbar>.container .navbar-brand-centered, 
 .navbar>.container-fluid .navbar-brand-centered {
