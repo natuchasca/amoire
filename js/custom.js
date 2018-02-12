@@ -262,7 +262,7 @@ function works() {
         "images/material_portafolio/katho/Cover_2.png",
         "images/material_portafolio/katho/Instagram_docentes.png",
         "images/material_portafolio/katho/planificador_Noviembre_para-grupo.jpg",
-        "images/material_portafolio/katho/promoción_final.jpg",
+        "images/material_portafolio/katho/promocion_final.jpg",
         "images/material_portafolio/katho/Promocion_15_noviembre.png",
         "images/material_portafolio/katho/Separador.jpg",
       ]
