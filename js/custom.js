@@ -7,6 +7,7 @@ CUSTOM JS
 // Preload body overlay effect
 $(window).on('load', function () {
   $('body').addClass('is-loaded');
+  $('.loading-circle').addClass('hidden');
   $("nav.navbar").removeClass('hidden');
 });
 
@@ -256,12 +257,12 @@ function works() {
       client: "Katho Jerez SpA – Marketing Digital",
       designdetail: "Imagen Corporativa y Manejo de RRSS. Diseño y desarrollo de soportes gráficos (Pendón, tarjetas de presentación, planificador, separador de páginas, caluga soporte editorial). Desarrollo soportes digital (Anuncios promocionales, post, mailing, recursos gráficos y publicidad en redes sociales)",
       images: [
-        "images/material_portafolio/katho/Cover_2.png",
         "images/material_portafolio/katho/Flyer_feria.jpg",
         "images/material_portafolio/katho/flyer_vestido.jpg",
+        "images/material_portafolio/katho/Cover_2.png",
         "images/material_portafolio/katho/Instagram_docentes.png",
         "images/material_portafolio/katho/planificador_Noviembre_para-grupo.jpg",
-        "images/material_portafolio/katho/Promoción final.jpg",
+        "images/material_portafolio/katho/promoción_final.jpg",
         "images/material_portafolio/katho/Promocion_15_noviembre.png",
         "images/material_portafolio/katho/Separador.jpg",
       ]
