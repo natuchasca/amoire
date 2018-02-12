@@ -111,9 +111,9 @@ function works() {
       client: "Decomundo Decoracíon",
       designdetail: "Diseño soportes digitales: Renovación de imagen (portada, perfil) y contenido redes sociales",
       images: [ 
+        "images/material_portafolio/decomundo/logo.jpg",
         "images/material_portafolio/decomundo/banner_decomundo_2.png",
         "images/material_portafolio/decomundo/collar.png",
-        "images/material_portafolio/decomundo/logo.jpg",
         "images/material_portafolio/decomundo/publicaion_decomundo.jpg"
       ]
     },
@@ -157,12 +157,12 @@ function works() {
         "images/material_portafolio/interfilm/MARTES 2_interfilm.png",
         "images/material_portafolio/interfilm/MARTES 9_interfilm.png",
         "images/material_portafolio/interfilm/Martes 18_oct.png",
-        "images/material_portafolio/interfilm/Martes 19_interfilm.png",
+        "images/material_portafolio/interfilm/Martes-19_interfilm.jpg",
         "images/material_portafolio/interfilm/MIERCOLES 6_interfilm.png",
         "images/material_portafolio/interfilm/Miercoles 31_interfilm.png",
         "images/material_portafolio/interfilm/miercoles_28 Sept.png",
         "images/material_portafolio/interfilm/VIERNES 5_interfilm.png",
-        "images/material_portafolio/interfilm/VIERNES_15 de Julio.png",
+        "images/material_portafolio/interfilm/VIERNES_15-de-Julio.jpg",
       ]
     },
     {
@@ -246,7 +246,7 @@ function works() {
       images: [
         "images/material_portafolio/casita_deco/logo.png",
         "images/material_portafolio/casita_deco/banner_casita.png",
-        "images/material_portafolio/casita_deco/Anuncio_1_casita_deco.png",
+        "images/material_portafolio/casita_deco/Anuncio_1_casita_deco.jpg",
       ]
     },
     {
@@ -260,7 +260,7 @@ function works() {
         "images/material_portafolio/katho/Flyer_feria.jpg",
         "images/material_portafolio/katho/flyer_vestido.jpg",
         "images/material_portafolio/katho/Instagram_docentes.png",
-        "images/material_portafolio/katho/planificador_Noviembre_para grupo.jpg",
+        "images/material_portafolio/katho/planificador_Noviembre_para-grupo.jpg",
         "images/material_portafolio/katho/Promoción final.jpg",
         "images/material_portafolio/katho/Promocion_15_noviembre.png",
         "images/material_portafolio/katho/Separador.jpg",
@@ -273,7 +273,7 @@ function works() {
       client: "Transportes Línea Azul",
       designdetail: "Diseño y diagramación de revista",
       images: [
-        "images/material_portafolio/revista_viajero/revista.png",
+        "images/material_portafolio/revista_viajero/revista.jpg",
         "images/material_portafolio/revista_viajero/revista2.jpg",
         "images/material_portafolio/revista_viajero/revista3.jpg",
         "images/material_portafolio/revista_viajero/revista4.jpg",
