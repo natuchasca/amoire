@@ -184,6 +184,10 @@ a {
   color: white;
   font-weight: 600;
 }
+a:hover {
+  color: #00796B;
+  text-decoration: none;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
@@ -485,9 +489,19 @@ ul.nav.nav-pills li a:hover {
   -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+  -webkit-transition: all 800ms ease-in-out;
+  -moz-transition: all 800ms ease-in-out;
+  -ms-transition: all 800ms ease-in-out;
+  -o-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 .work-container a {
   text-decoration: none;
+}
+.work-container:hover {
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
+  box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
 }
 .work-item {
   height: 250px;
@@ -529,8 +543,8 @@ BIO
 */
 .bio-img {
   margin-top: 50px;
+  width: 90%;
 }
-
 
 
 /* 
@@ -786,8 +800,11 @@ SIDR MOBILE MENÚ
   position: absolute;
   z-index: 1000;
   width: 100%;
-  top: -50px;
+  top: -45px;
   text-align: center;
+}
+.hexagon .text h3 {
+  margin-top: 5px;
 }
 
 
@@ -971,6 +988,21 @@ MEDIA QUERIES
   .fixed-work-description {
     position: relative;
     display: block;
+  }
+  .work-images-grid img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bio-img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about h1 {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
