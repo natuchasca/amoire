@@ -163,6 +163,10 @@ body {
   background: #111111;
   font-family: 'Vegur-Light';
   font-size: 16px;
+  overflow: hidden;
+}
+body.is-loaded {
+  overflow: auto;
 }
 .wrapper {
   max-width: 100%;
