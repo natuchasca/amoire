@@ -231,13 +231,27 @@ $(".navbar").hide();
 $("footer").hide();
 $(".scrollToTop").hide();
 $(".loading-circle").show();
-  
+new WOW().init();
+$(".carousel").carousel();
 
 $(function() {
-  $(".carousel").carousel();
-  // $("a.scroller").smoothscrolling();
-  new WOW().init();
 
+  // Scrolling
+  $('a.scroller').on('click', function(event) {
+    $.scrollify.move($(this).attr("href"));
+  });
+
+  $.scrollify({
+    section : ".scrollify",
+    sectionName : "section-name",
+    interstitialSection : "",
+    easing: "easeOutExpo",
+    scrollSpeed: 1300,
+    offset : 0,
+    setHeights: false,
+    updateHash: true,
+  });
+  
   // sidr config
   $("#mobile-menu-toggle").sidr({
     side: "right",
@@ -265,13 +279,22 @@ $(function() {
   });
 
   // Navbar hide and show scroll
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 100) {
+  //     $(".navbar").fadeIn();
+  //   } else {
+  //     $(".navbar").fadeOut();
+  //   }
+  // });
+  function resizeNav() {
+    if($(document).scrollTop()>10){
       $(".navbar").fadeIn();
-    } else {
+    } else{
       $(".navbar").fadeOut();
     }
-  });
+  }
+  resizeNav();
+  $(window).on('scroll',resizeNav);
 
   // Scroll totop
   $(window).scroll(function() {

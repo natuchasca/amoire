@@ -1,14 +1,9 @@
-/* Colors and typography 
-Titles -> Wox
-Subtitles -> Rio
-Parrafes -> Vegur
-
-cyan #68e4ae
-blue #5bcdc3
-orange #ff9b07
-red #f24632
-magenta #df5265
-yellow f9e932
+/* 
+=======================================
+AMOIRÉ ::: Portfolio Ayleen Sanhueza R.
+created by Natuchasca ::: 2018
+github.com/natuchasca
+=======================================
 */
 
 
@@ -17,15 +12,33 @@ yellow f9e932
 COLORS
 =======================================
 */
+.primary-color { color: #009688; }
+.bg-primary { background-color: #009688; }
+
+.background-cyan { background-color: #68e4ae; }
+.background-blue { background-color: #5bcdc3; }
+.background-orange { background-color: #ff9b07; }
+.background-red { background-color: #f24632; }
+.background-magenta { background-color: #df5265; }
+.background-yellow { background-color: #f9e932; }
+.cyan { color: #68e4ae; }
+.blue { color: #5bcdc3; }
+.orange { color: #ff9b07; }
+.red { color: #f24632; }
+.magenta { color: #df5265; }
+.yellow { color: #f9e932; }
+
 button.btn-pantone {
   color: #ffffff;
-  -webkit-transition: all 800ms ease-in-out;
-  -moz-transition: all 800ms ease-in-out;
-  -ms-transition: all 800ms ease-in-out;
-  -o-transition: all 800ms ease-in-out;
-  transition: all 800ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   font-size: 16px;
   font-weight: 600;
+  border-radius: 0;
+  padding: 10px;
 }
 .pantone-cyan {
   color: #fff;
@@ -33,16 +46,16 @@ button.btn-pantone {
   border: 1px dashed #009688;
 }
 button.btn-pantone.cyan {
-  color: #ffffff;
-  background-color: #009688;
-  border: 1px solid #009688;
-}
-button.btn-pantone.cyan:hover,
-button.btn-pantone.cyan.active {
   box-shadow: none;
   color: #00796B;
   background-color: #ffffff;
   border-color: #00796B;
+}
+button.btn-pantone.cyan:hover,
+button.btn-pantone.cyan.active {
+  color: #ffffff;
+  background-color: #009688;
+  border: 1px solid #009688;
 }
 
 .pantone-blue {
@@ -140,6 +153,9 @@ button.btn-pantone.yellow.active {
 /* 
 =======================================
 FONTS
+Titles -> Wox
+Subtitles -> Rio
+Parrafes -> Vegur
 =======================================
 */
 @font-face {
@@ -150,6 +166,14 @@ FONTS
          url('../fonts/original_Vegur-Light.svg') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'woxmodelist_demoregular';
+  src: url('../fonts/wox_modelist_regular-webfont.woff2') format('woff2'),
+       url('../fonts/wox_modelist_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 
@@ -171,7 +195,7 @@ body.is-loaded {
 .wrapper {
   max-width: 100%;
   overflow: hidden;
-  background: white;
+  background: #ffffff;
   -webkit-transition: all .55s ease-out;
   transition: all .55s ease-out;
   opacity: 0;
@@ -185,7 +209,7 @@ body.is-loaded {
   opacity: .55;
 }
 a {
-  color: white;
+  color: #ffffff;
   font-weight: 600;
 }
 a:hover {
@@ -193,7 +217,7 @@ a:hover {
   text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'woxmodelist_demoregular', Arial, sans-serif;
   font-weight: 600;
 }
 p {
@@ -202,7 +226,7 @@ p {
   font-size: 16px;
 }
 .padding-sections {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 .no-padding {
   padding-left: 0;
@@ -224,7 +248,7 @@ hr.creative:after {
   top: -0.7em;
   font-size: 1.5em;
   padding: 0 0.25em;
-  background: white;
+  background: #ffffff;
 }
 
 
@@ -268,6 +292,13 @@ CENTER NAV
 .nav.navbar-nav li {
   width: 100px;
   text-align: center;
+  font-size: 2rem;
+}
+.contact-bar li {
+  min-width: 200px;
+}
+.contact-bar li a {
+  display: inline-block;
 }
 
 
@@ -277,7 +308,7 @@ HEADER FADE CARRUSEL
 =======================================
 */
 header {
-  background-color: black;
+  background-color: #000000;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -316,7 +347,7 @@ header {
 .poligon-module {
   -webkit-clip-path: polygon(0 39%, 100% 0, 100% 63%, 0 100%);
   clip-path: polygon(0 39%, 100% 0, 100% 63%, 0 100%);
-  background-color: black;
+  background-color: #000000;
 }
 .big {
   font-size: 3em;
@@ -329,8 +360,11 @@ h1.big-title {
   font-size: 5em;
   font-weight: 600;
 }
+header h1 {
+  font-size: 2.5em;
+}
 header p {
-  font-size: 2.3em;
+  font-size: 2rem;
 }
 .sider-title {
   position: absolute;
@@ -338,7 +372,7 @@ header p {
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
   height: 100%;
   bottom: 0;
-  color: black;
+  color: #000000;
   background-color: #ffffff;
   width: 40%;
   padding: 70px 100px;
@@ -429,12 +463,12 @@ header .scroll-down {
 header .scroll-down .btn {
   height: 50px;
   width: 50px;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   border-radius: 100% !important;
   line-height: 50px;
   padding: 0;
   letter-spacing: normal;
-  color: white;
+  color: #ffffff;
   font-size: 30px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -484,59 +518,143 @@ ul.nav.nav-pills li a:hover {
 }
 
 /* Pantone Card */
+.works-container-flex {
+  display: flex;
+}
 .work-container {
-	margin: 20px 0;
-  background-color: #f5f6fa;
-  /*background-color: #ffffff;*/
-  color: black;
-  /*border: 1px solid rgba(0,0,0,0.21);*/
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+	margin: 10px 0;
+/*  background-color: #f5f6fa;
+  background-color: #ffffff;
+  color: #000000;*/
+  /*-moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
   -webkit-transition: all 800ms ease-in-out;
   -moz-transition: all 800ms ease-in-out;
   -ms-transition: all 800ms ease-in-out;
   -o-transition: all 800ms ease-in-out;
-  transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;*/
+  background: none;
+  /*border: 0;*/
+  /*border: 2px solid rgba(0,0,0,0.21);*/
+  box-sizing: border-box;
+  /*padding: 1em 2em;*/
+  /*box-shadow: inset 0 0 0 2px rgba(0,0,0,0.21);*/
+  /*color: #f45e61;*/
+  font-size: inherit;
+  /*font-weight: 700;*/
+  position: relative;
+  /*vertical-align: middle;*/
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 .work-container a {
   text-decoration: none;
 }
+.work-container::before, .work-container::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .work-container:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+/*.draw {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: #60daaa;
+}
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.draw:hover::before {
+  border-top-color: #60daaa;
+  border-right-color: #60daaa;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: #60daaa;
+  border-left-color: #60daaa;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}*/
+/*.work-container:hover {
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
   box-shadow: 2px 2px 5px 1px rgba(0, 150, 136, 0.3);
-}
+}*/
 .work-item {
   height: 250px;
   width: 100%;
   overflow: hidden;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   text-align: center;
 }
 .work-item img {
   display: inline-block;
   vertical-align: middle;
   /*max-height: 100%;*/
-  max-width: 100%;
+  /*  height: 250px;*/
+  width: 100%;
 }
 .work-description {
-  height: 50px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 	padding: 10px;
-  color: #000000;
+  color: #fff;
+  background-color: rgba(0, 150, 136, 0.9);
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
-.work-description h5 {
+.work-description h3 {
   text-transform: uppercase;
   margin: 0;
-  font-size: 16px;
+  /*font-size: 16px;*/
 }
-.work-description h5 span {
+.work-description h3 span {
+  font-family: 'Vegur-Light';
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 span.subtle {
 	font-family: 'Vegur-Light';
+}
+.work-container .work-description:hover {
+  opacity: 1;
 }
 
 
@@ -558,7 +676,7 @@ FOOTER
 */
 footer {
 	background-color: #111111;
-	color: white;
+	color: #ffffff;
 	padding: 20px 0 10px 0;
 }
 
@@ -674,7 +792,7 @@ dt {
   /*max-height: 300px;*/
   overflow: hidden;
   color: #000;
-  border: 1px dashed black;
+  border: 1px dashed #000000;
 }
 .box img {
   width: 100%;
@@ -723,11 +841,16 @@ SIDR MOBILE MENÚ
 .sidr ul li span {
   font-weight: 300;
 }
+.sidr ul li a i {
+  margin-right: 10px;
+}
 #sidr li.logo img.sidr-logo {
   height: 100px;
   width: 100px;
   border-radius: 100px;
   margin: 30px auto;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
 
@@ -765,17 +888,13 @@ SIDR MOBILE MENÚ
 
 .hexagon {
   position: relative;
-  width: 200px; 
+  width: 200px;
   height: 115.47px;
   background-color: #ffffff;
   /*background: linear-gradient(-45deg, rgb(8, 174, 234) 0%, rgb(42, 245, 152) 100%);*/
-  margin: 57.74px 0;
-  border-left: solid 2px #000000;
-  border-right: solid 2px #000000;
-  left: 0; 
-  right: 0; 
-  margin-left: auto;
-  margin-right: auto;
+  margin: 70px auto;
+  border-left: solid 2px #009688;
+  border-right: solid 2px #009688;
 }
 .hexagon:before,
 .hexagon:after {
@@ -792,23 +911,34 @@ SIDR MOBILE MENÚ
 }
 .hexagon:before {
   top: -70.7107px;
-  border-top: solid 2.8284px #000000;
-  border-right: solid 2.8284px #000000;
+  border-top: solid 2.8284px #009688;
+  border-right: solid 2.8284px #009688;
 }
 .hexagon:after {
   bottom: -70.7107px;
-  border-bottom: solid 2.8284px #000000;
-  border-left: solid 2.8284px #000000;
+  border-bottom: solid 2.8284px #009688;
+  border-left: solid 2.8284px #009688;
 }
 .text{
   position: absolute;
   z-index: 1000;
   width: 100%;
-  top: -45px;
+  top: 0px;
   text-align: center;
 }
 .hexagon .text h3 {
   margin-top: 5px;
+}
+.hexagon i.fa {
+  color: #009688;
+  position: absolute;
+  top: -90px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 60px;
+  background: #fff;
 }
 
 
@@ -864,7 +994,7 @@ MEDIA QUERIES
   }
   button.navbar-toggle:focus,
   button.navbar-toggle:hover {
-    background-color: white;
+    background-color: #ffffff;
   }
   button.navbar-toggle:focus span.icon-bar,
   button.navbar-toggle:hover span.icon-bar {
@@ -963,7 +1093,7 @@ MEDIA QUERIES
     font-size: 2em;
   }
   header p {
-    font-size: 2em;
+    font-size: 2rem;
   }
   .btn-pantone {
     display: block;
@@ -1020,8 +1150,8 @@ MEDIA QUERIES
 }
 
 @media (max-width: 1000px) {
-  header p {
-    font-size: 2em;
+  header h1 {
+    font-size: 4rem;
   }
   .sider-title {
     width: 60%;
